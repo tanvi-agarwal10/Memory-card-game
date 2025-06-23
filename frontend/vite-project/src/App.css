@@ -1,0 +1,110 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f7b42c 0%, #fc575e 100%);
+  padding: 24px;
+}
+
+.congrats {
+  margin-top: 24px;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #22c55e;
+}
+
+/* Modal styles */
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+.modal {
+  background: #fffbe7;
+  border-radius: 18px;
+  padding: 32px 40px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  text-align: center;
+  animation: pop-in 0.3s cubic-bezier(.68,-0.55,.27,1.55);
+  border: 3px solid #fc575e;
+}
+.modal h2 {
+  color: #fc575e;
+  margin-bottom: 12px;
+  font-size: 2rem;
+}
+.modal p {
+  color: #f7b42c;
+  font-size: 1.1rem;
+  margin: 8px 0;
+}
+.modal-reset {
+  margin-top: 18px;
+  background: linear-gradient(90deg, #fc575e 0%, #f7b42c 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 28px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(252,87,94,0.15);
+  transition: background 0.2s, transform 0.2s;
+}
+.modal-reset:hover {
+  background: linear-gradient(90deg, #f7b42c 0%, #fc575e 100%);
+  transform: scale(1.07);
+}
+@keyframes pop-in {
+  0% { transform: scale(0.7); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
